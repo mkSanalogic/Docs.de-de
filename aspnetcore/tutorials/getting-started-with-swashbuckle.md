@@ -100,6 +100,8 @@ Aktivieren Sie die Middleware in der `Startup.Configure`-Methode, um das generie
 
 [!code-csharp[](../tutorials/web-api-help-pages-using-swagger/samples/2.0/TodoApi.Swashbuckle/Startup2.cs?name=snippet_Configure&highlight=4,8-11)]
 
+Bitte beachten: Die unter "Anpassen und Erweitern" geschilderten Schritte sind zwingen notwendig, wenn in services.AddSwaggerGen() keine SwaggerDoc definiert wird erzeugt der Aufruf der /swagger Url lediglich die Fehlermeldung "Failed to load API definition".
+
 Starten Sie die App, und navigieren Sie zu `http://localhost:<port>/swagger/v1/swagger.json`. Das generierte Dokument mit der Beschreibung der Endpunkte wird entsprechend der [Swagger-Spezifikation (swagger.json)](xref:tutorials/web-api-help-pages-using-swagger#swagger-specification-swaggerjson) angezeigt.
 
 Die Swagger-Benutzeroberfläche ist unter `http://localhost:<port>/swagger` verfügbar. Mit der Swagger-Benutzeroberfläche können Sie die API kennenlernen und sie in andere Programme integrieren.
